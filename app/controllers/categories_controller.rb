@@ -13,9 +13,15 @@ class CategoriesController < ApplicationController
     end
     
     def create
-        @categories = Category.find(params[:id])
-        @categories = Category.new 
+   @category =  Category.new(category_params)
+   @category.save
+
+   redirect_to category_path(@category)
+    end
+
+    private
+
+    def category_params 
+    params.require(:category).permit :title
     end
 end
-
-
