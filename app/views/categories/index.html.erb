@@ -1,10 +1,8 @@
 <h1>INDEX</h1>
 
-
   <% @categories.each do |category| %>
   <h5><%= link_to category.title, category_path(category) %></h5>
   <% end %>
 
-
-
  <%= link_to 'new', new_category_path(@categories) %>
+ 
