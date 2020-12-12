@@ -23,10 +23,10 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    if @category = Category.update(category_params)
+    if @category.update(category_params)
       redirect_to category_path(@category), notice: 'Category updated successfully'
     else
-      render :new
+      render :edit
     end
   end
 
