@@ -1,22 +1,30 @@
-<h1>CATEGORIES NEW</h1>
-<% if notice.present? %>
-  <%= notice.html_safe %>
-<% end %>
- 
- <h1><%=@category.title%></h1>
+<div class=show-page-container>
 
-<p> add picture </p>
-<p> edit picture </p>
-<p> delete picture </p>
+  <h1><%= @category.title  %></h1>
+  <div class="row"> 
+  <% if notice.present? %>
+    <%= notice.html_safe %>
+  <% end %>
 
-<%= link_to "Delete",
-            category_path(@category.id),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
 
-<%= link_to 'Back', categories_path(@categories) %>
 
-<%= link_to 'Edit category', edit_category_path(@category) %>
+    <div class="col-sm-12 col-md-4 col-lg-3"> 
 
-<%= link_to 'Add category', new_category_path(@categories) %>
+    <%= cl_image_tag @category.photo.key, height: 300, width: 400, crop: :fill %>
 
+  
+  <%= link_to 'Back', categories_path(@categories) %>
+    
+
+  <%= link_to "Delete",
+              category_path(@category.id),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+
+
+   
+  <%= link_to 'Edit category', edit_category_path(@category) %>
+
+    </div>
+  </div>
+</div>
