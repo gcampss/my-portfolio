@@ -1,1 +1,11 @@
 <h2>form new post</h2>
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, :description, input_html: { autocomplete: 'off' } %>
+  <%= f.input :photo, as: :file, input_html: { multiple: true } %>
+
+  <%= f.submit "NEXT", class: "btn btn-primary" %>
+
+<% end %>
+
+  <%= link_to 'Back to categories', categories_path(@category) %>
