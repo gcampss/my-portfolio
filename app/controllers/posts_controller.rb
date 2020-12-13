@@ -1,13 +1,16 @@
 class PostsController < ApplicationController
-before_action :set_post, only: [:edit, :update, :destroy]
+
+  before_action :set_post, only: [:edit, :update, :destroy]
 
   def new
     @post = Post.new
   end
 
   def create
-    @post = Post.new(set_post)
+    @post = Post.new(post_params)
     @post.save
+
+    redirect_to category_path(@category)
   end
 
   def edit
@@ -30,7 +33,7 @@ before_action :set_post, only: [:edit, :update, :destroy]
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :photos)
+    params.require(:post).permit(:title, :description, :photos [])
   end
 
   def set_post
