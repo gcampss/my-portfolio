@@ -12,11 +12,9 @@ class PostsController < ApplicationController
     @category = Category.find(params[:category_id])
     @post.category = @category
     if @post.save
-
-    redirect_to category_path(@category)
-
-  else
-    render :new
+      redirect_to category_path(@category)
+    else
+      render :new
     end
   end
 
@@ -35,14 +33,13 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy!
-
     redirect_to category_path(@post.category)
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :photos [])
+    params.require(:post).permit(:title, :description, :photos => [])
   end
 
   def set_post

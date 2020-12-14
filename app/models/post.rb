@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :category
 
-  validates :title, :description, presence: true
+  validates :title, :description, :photos, presence: true #photos?
 
-  has_one_attached :photos
+  has_many_attached :photos
 end
