@@ -3,14 +3,21 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
 
   def new
+    @category = Category.find(params[:category_id])
     @post = Post.new
   end
 
   def create
     @post = Post.new(post_params)
-    @post.save
+    @category = Category.find(params[:category_id])
+    @post.category = @category
+    if @post.save
 
     redirect_to category_path(@category)
+
+  else
+    render :new
+    end
   end
 
   def edit
@@ -18,16 +25,18 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
+
       redirect_to category_path
     else
       render :edit
+    end
   end
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy!
 
-    redirect_to categories_path
+    redirect_to category_path(@post.category)
   end
 
   private
