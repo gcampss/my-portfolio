@@ -2,7 +2,7 @@
 <h1>Gabriel Campista Portfolio</h1>
 
   <div class="col-sm-12 col-md-6 col-lg-4">
-<%= link_to 'Add category', new_category_path(@categories) %>
+<%= link_to 'Add category', new_category_path %>
 
   <% @categories.each do |category| %>
   <h5><%= link_to category.title, category_path(category) %></h5>

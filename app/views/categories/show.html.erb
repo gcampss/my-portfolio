@@ -6,27 +6,34 @@
     <%= notice.html_safe %>
   <% end %>
 
-
-
     <div class="col-sm-12 col-md-4 col-lg-3"> 
 
-    <% if @category.photo.attached? %>
-    <%= cl_image_tag @category.photo.key, height: 300, width: 400, crop: :fill %>
+    <ul class="list-group">
+  <% @category.posts.each do |post| %>
+    <li class="list-group-item"><%= post.title %></li>
+    <li class="list-group-item"><%= post.description %></li>
+  <% if post.photos.attached? %>
+    <%= cl_image_tag post.photos.first.key, height: 300, width: 400, crop: :fill %>
     <% else %>
     <% end %>
-  
+     <%= link_to "Remove",
+                   category_post_path(@category, post),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+</ul>
 
   
   <%= link_to 'Back', categories_path(@categories) %>
     
 
-  <%= link_to "Delete",
+  <%= link_to "Delete category",
               category_path(@category.id),
               method: :delete,
               data: { confirm: "Are you sure?" } %>
 
 
-   
+  <%= link_to 'Add new photo', new_category_post_path(@category) %>
   <%= link_to 'Edit category', edit_category_path(@category) %>
 
     </div>
