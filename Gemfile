@@ -33,6 +33,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
+gem 'high_voltage', '~> 3.1'
 
 group :development, :test do
   gem 'pry-byebug'
