@@ -1,0 +1,30 @@
+.page-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+
+.content-footer {
+    background-color: #1B1817;
+    height: 50px;;
+}
+
+.footer-row li {
+    color: #FFF4BD;
+    font-size: 15px;
+    text-shadow:1px 1px 4px rgba(250, 208, 44, 0.4);
+}
+
+.footer-row a {
+    color: #FFF4BD;
+    font-size: 15px;
+    text-shadow:1px 1px 4px rgba(250, 208, 44, 0.4);
+}
+
+.footer-row a:hover {
+    color: #FAD02C;
+}
+
+.bot-container  {
+    background-color:#1B1817;
+}
