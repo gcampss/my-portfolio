@@ -1,15 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+.logo {
+    display: flexbox;
+}
 
 .logo h6 {
     font-family: Ubuntu;
-    font-size: 30px;
+    font-size: 20px;
     color:  #FFF4BD;
-  
+    font-weight: 400;
+ 
+   position: absolute; 
+	top: 30px;
+    left: 110px;
+    text-shadow: 1px 1px 0.5px #FAD02C;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo h5 {
+    font-family: Ubuntu;
+    font-size: 20px;
+    color:  #FFF4BD;
+    font-weight: 400;
+   position: absolute; 
+	top: 60px;
+	left: 110px;
+    text-shadow: 1px 1px 0.5px  #FAD02C;
+   
+
 }
 
 .button {
 width: 20%;
-color:  #FFF4BD;
+color: #d3d3d3;
 background: none;
 height: 50px;
 font-family: Ubuntu;
@@ -20,34 +45,51 @@ border: 2px solid #d3d3d3;
 
 .button:hover {
 width: 20%;
-
 background: none;
 height: 50px;
 font-family: Ubuntu;
 border-radius: 12px;
-border: 2px solid #FAD02C;
- 
+border: 2px solid  #FAD02C;
+text-shadow: 1px 1px 0.5px  #FAD02C;
+   
+
 }
 
 .btn-in {
   
-    text-align: center;
+    
     position: relative;
-    margin-top: 30px;
+    bottom: -350px;
+    left: 110px;
+
+  
    
 }
 
 .banner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     padding: 250px 0;
-    text-align: center;
-    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608326690/DSC_2301_ryxs8i.jpg');
-    max-width:100% !important
+   
+    
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608382011/DSC_9573_q4u1tr.jpg');
+   
 
     
 }
 
 .container-landing {
     
-    height: 500px;
+    height: 360px;
+   
+    
 }
+
+// .page-container{
+//     background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608326690/DSC_2301_ryxs8i.jpg');
+//     background-size: cover;
+//     max-width:100% !important;
+//     box-shadow: 1px 1px 1px #000055;
+// }
