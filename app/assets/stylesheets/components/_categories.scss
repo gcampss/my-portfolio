@@ -1,0 +1,31 @@
+.exp-card-head {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) );
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 15px;
+    height: 100%;
+    filter: brightness(80%);
+    font-family:Ubuntu, sans-serif ;
+    color:  #FFF4BD;
+    font-size: 21px;
+    max-width: 300px;
+}
+
+.exp-container {
+      // background-color: gray;
+  margin: 10px 10px;
+  // padding: 20px;
+//   // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 500px;
+  border-radius: 10px;
+  align-content: space-between;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  // text-decoration: none;
+}
+
