@@ -8,15 +8,22 @@
 
     <% @categories.each do |category| %>
     <div class="exp-container"> 
-      <ul class="list-group">
-        <li class="list-group-item"><%= category.title %></li>
-        <% if category.photo.attached? %>
-        <%= cl_image_tag category.photo.key, height: 300, width: 400, crop: :fill %>
-    <% else %>
-  <% end %>
+ 
+ <div class="pics-cont"> 
+          <%= category.title %>
+          <% if category.photo.attached? %>
+
+        <%= link_to category_path(category) do %>
+          
+          <%= cl_image_tag category.photo.key, height: 300, width: 400, crop: :fill %>
+           <% end %>
+
+      <% else %>
+    <% end %>
+  </div>
 
       
-    <h5><%= link_to category.title, category_path(category) %></h5>
+  
     
       
     </div>
