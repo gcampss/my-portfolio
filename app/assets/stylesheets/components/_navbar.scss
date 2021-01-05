@@ -63,13 +63,14 @@ background-color: #1B1817;
   font-size: 28px;
   transition: 0.2s ease-out;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+ 
 }
 
 .dropdown-burger:hover {
-  color:  #FAD02C;
   font-size: 28px;
-  text-shadow: 2px 2px 2px rgb(0,0,0);
+  text-shadow: 2px 2px 2px rgb(51, 50, 50);
   transform: translateY(-1px);
+  cursor: pointer;
 }
 
 .nav-drop a {
@@ -84,6 +85,11 @@ background-color: #1B1817;
 .dropdown-item {
   color: #FFF4BD;
 }
+
+.dropdown-item a:hover {
+  background-color: salmon;
+}
+
 .dropdown-menu {
   background-color: rgba(50, 50, 50, 0.6);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
@@ -95,3 +101,4 @@ background-color: #1B1817;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
 }
+
