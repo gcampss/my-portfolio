@@ -4,27 +4,22 @@
     <title>MyPortfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-  <% unless current_page?(root_path) %>
-  
-    <div class="navbar-container"><%= render 'shared/navbar' %></div>
-    <% end %>
-  <div class="page-container">
-    <div class="navbar-flash"><%= render 'shared/flashes' %></div>
-      <%# <div class="container"> %>
-      <%= yield %>
-      <%# </div> %>
-     
-    
-    <div class="navbar-footer"><%= render 'shared/footer' %></div>
-  </div>
+    <div class="page-container-global">
+      <% unless current_page?(root_path) %>
+        <div class="navbar-container">
+          <%= render 'shared/navbar' %>
+        </div>
+      <% end %>
+      <%# <div class="navbar-flash"><%= render 'shared/flashes' %>
+      <div class="content-container"><%= yield %></div>
+      <div class="footer-container"><%= render 'shared/footer' %></div>
+    </div>
   </body>
 </html>
 

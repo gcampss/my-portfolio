@@ -1,35 +1,20 @@
- <%= link_to '+ Add category', new_category_path %>
+<%= link_to '+ Add category', new_category_path %>
 <div class="container"> 
-  <div class="index-container">
-  <%# <h1>Gabriel Campista Portfolio</h1> %>
-
-    <div class="col-sm-4 col-md-2 col-lg-2">
- 
-
-    <% @categories.each do |category| %>
-    <div class="exp-container"> 
- 
- <div class="exp-card-head"> 
-          <%= category.title %>
-          <% if category.photo.attached? %>
-
-        <%= link_to category_path(category) do %>
-          
-          <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
-           <% end %>
-
-      <% else %>
+  <div class="row">
+      <% @categories.each do |category| %>
+        <div class="col-md-6">
+          <div class="exp-container"> 
+            <div class="exp-card-head"> 
+                <%= category.title %>
+                <% if category.photo.attached? %>
+                  <%= link_to category_path(category) do %>
+                    <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
+                  <% end %>
+                <% end %>
+            </div>
+          </div>
+        </div>
     <% end %>
-  </div>
-
-      
-  
-    
-      
-    </div>
-    <% end %>
-
-    </div>
   </div>
 </div>
  
