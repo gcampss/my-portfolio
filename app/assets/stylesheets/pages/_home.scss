@@ -7,27 +7,30 @@
 
 .logo h6 {
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 40px;
     color:  #FFF4BD;
     font-weight: 400;
  
-   position: absolute; 
+    position: absolute; 
 	top: 30px;
     left: 110px;
-    text-shadow: 1px 1px 0.5px #FAD02C;
-    padding: 0px;
+    // text-shadow: 1px 1px 0.5px #FAD02C;
+    padding: 10px;
     margin: 0px;
+    // box-shadow: 0 0 40px rgba(0,0,0,0.1);
 }
 
 .logo h5 {
     font-family: Ubuntu;
-    font-size: 20px;
-    color:  #FFF4BD;
+    font-size: 30px;
+    color:  #FAD02C;
     font-weight: 400;
    position: absolute; 
 	top: 60px;
-	left: 110px;
-    text-shadow: 1px 1px 0.5px  #FAD02C;
+    left: 122px;
+    margin-top: 20px;
+    // box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    // text-shadow: 1px 1px 0.5px  #FAD02C;
    
 
 }
@@ -93,7 +96,7 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
 .page-container-global {
     //  background-image: url('https://res.cloudinary.com/chocalho/image/upload/e_art:incognito/v1608401990/photo-1527606078995-42486f991014_hwmnhn.jpg');
-    //  background-color: #1B1817;
+     background-color: #1B1817;
      display: grid;
      min-height: 100vh;
      grid-template-rows: auto 1fr auto;
