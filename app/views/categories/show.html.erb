@@ -1,19 +1,19 @@
  <div class="container">
   <div class="row"> 
-    <% if notice.present? %>
-      <%= notice.html_safe %>
-      <% end %>
-        <div class="col-md-12">
-          <ul class="list-group">
-          <% @category.posts.each do |post| %>
-            <% if post.photos.attached? %>
-              <div class="test-center"> 
-                  <h1><%= @category.title  %></h1>
-                      <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>
+        <% if notice.present? %>
+          <%= notice.html_safe %>
+          <% end %>
+    <div class="col-md-12">
+      <ul class="list-group">
+        <% @category.posts.each do |post| %>
+          <% if post.photos.attached? %>
+            <div class="test-center"> 
+              <h1><%= @category.title  %></h1>
+              <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>
                   
-                      <li class="list-group-item"><%= post.title %></li>
-                      <li class="list-group-item"><%= post.description %></li>
-                </div> 
+                <li class="list-group-item"><%= post.title %></li>
+                <li class="list-group-item"><%= post.description %></li>
+            </div> 
               <% else %>
               <% end %>
                       <%= link_to "Remove",
