@@ -72,12 +72,8 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
     -o-background-size: cover;
     background-size: cover;
     padding: 250px 0;
-   
-    
     background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608382011/DSC_9573_q4u1tr.jpg');
-   
-
-    
+    height: 100vh;
 }
 
 .container-landing {
@@ -93,3 +89,12 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 //     max-width:100% !important;
 //     box-shadow: 1px 1px 1px #000055;
 // }
+
+
+.page-container-global {
+    //  background-image: url('https://res.cloudinary.com/chocalho/image/upload/e_art:incognito/v1608401990/photo-1527606078995-42486f991014_hwmnhn.jpg');
+    //  background-color: #1B1817;
+     display: grid;
+     min-height: 100vh;
+     grid-template-rows: auto 1fr auto;
+}
