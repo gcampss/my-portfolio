@@ -6,12 +6,14 @@
           <div class="exp-container"> 
             <div class="exp-card-head"> 
                 <%= category.title %>
+                <div class="card-style-category">
                 <% if category.photo.attached? %>
-                  <%= link_to category_path(category) do %>
+                  <%= link_to category_path(category) do %> 
                     <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
                   <% end %>
                 <% end %>
-            </div>
+             </div>
+           </div>
           </div>
         </div>
     <% end %>

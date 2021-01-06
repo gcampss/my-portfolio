@@ -10,7 +10,8 @@
     font-family:Ubuntu, sans-serif ;
     color:  #FFF4BD;
     font-size: 21px;
-    max-width: 300px;
+    max-width: 215px;
+    max-height: 465px;
 }
 
 .exp-container {
@@ -29,3 +30,15 @@
   // text-decoration: none;
 }
 
+.card-style-category img {
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(250,208,44, 0.1);
+}
+
+.test-center {
+  margin: 0 auto;
+}
+
+.test-center h1 {
+  text-align: center;
+}

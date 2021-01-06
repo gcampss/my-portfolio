@@ -1,40 +1,40 @@
-<div class="show-page-container">
-
-  <h1><%= @category.title  %></h1>
+ <div class="container">
   <div class="row"> 
-  <% if notice.present? %>
-    <%= notice.html_safe %>
-  <% end %>
+    <% if notice.present? %>
+      <%= notice.html_safe %>
+      <% end %>
+        <div class="col-md-12">
+          <ul class="list-group">
+          <% @category.posts.each do |post| %>
+            <% if post.photos.attached? %>
+              <div class="test-center"> 
+                  <h1><%= @category.title  %></h1>
+                      <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>
+                  
+                      <li class="list-group-item"><%= post.title %></li>
+                      <li class="list-group-item"><%= post.description %></li>
+                </div> 
+              <% else %>
+              <% end %>
+                      <%= link_to "Remove",
+                                    category_post_path(@category, post),
+                                    method: :delete,
+                                    data: { confirm: "Are you sure?" } %>
+                    <% end %>
+                  </ul>
 
-    <div class="col-sm-12 col-md-4 col-lg-3"> 
+                    
+                    <%= link_to 'Back', categories_path(@categories) %>
+                      
 
-    <ul class="list-group">
-  <% @category.posts.each do |post| %>
-    <li class="list-group-item"><%= post.title %></li>
-    <li class="list-group-item"><%= post.description %></li>
-  <% if post.photos.attached? %>
-    <%= cl_image_tag post.photos.first.key, height: 300, width: 400, crop: :fill %>
-    <% else %>
-    <% end %>
-     <%= link_to "Remove",
-                   category_post_path(@category, post),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-  <% end %>
-</ul>
-
-  
-  <%= link_to 'Back', categories_path(@categories) %>
-    
-
-  <%= link_to "Delete category",
-              category_path(@category.id),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+                    <%= link_to "Delete category",
+                                category_path(@category.id),
+                                method: :delete,
+                                data: { confirm: "Are you sure?" } %>
 
 
-  <%= link_to 'Add new photo', new_category_post_path(@category) %>
-  <%= link_to 'Edit category', edit_category_path(@category) %>
+                    <%= link_to 'Add new photo', new_category_post_path(@category) %>
+                    <%= link_to 'Edit category', edit_category_path(@category) %>
 
     </div>
   </div>
