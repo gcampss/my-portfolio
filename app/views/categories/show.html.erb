@@ -15,10 +15,10 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>
+                    <%= cl_image_tag post.photos.first.key, height: 600, width: 1000, crop: :fill %>
                     </div>
                     <div class="carousel-item">
-                      <%= cl_image_tag post.photos.second.key, height: 600, width: 800, crop: :fill %>
+                      <%= cl_image_tag post.photos.second.key, height: 600, width: 1000, crop: :fill %>
                     <%# </div>
                     <div class="carousel-item">
                      <%= cl_image_tag post.photos.third.key, height: 600, width: 800, crop: :fill %> 
@@ -32,7 +32,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
-                  <li class="list-group-item"><%= post.title%></li>
+                  <li class="list-group-item"><%= post.title %></li>
                   <li class="list-group-item"><%= post.description %></li> 
                 </div>
             </div> 
