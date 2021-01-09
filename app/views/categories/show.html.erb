@@ -22,17 +22,20 @@
                 <div class="carousel-item active">
                  <%= cl_image_tag post.photos.first.key, height: 600, width: 1000, crop: :fill %>
                    <div class="carousel-caption d-none d-md-block">
-                    <h5>Surf in Matosinhos</h5>
-                    <p>Young Surfer get ready for some waves</p>
+                    <h5><%= post.title %></h5>
+                    <p><%= post.description %></p>
                   </div>
                 </div>
+                 <% post.photos[1..-1].each do |photo| %>
                 <div class="carousel-item">
-                  <%= cl_image_tag post.photos.second.key, height: 600, width: 1000, crop: :fill %>
+                  <%= cl_image_tag photo.key, height: 600, width: 1000, crop: :fill %>
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Porto Sunrise</h5>
-                    <p>First light close to Dragon Stadium in Porto</p>
+                    <h5><%= post.title %></h5>
+                    <p><%= post.description %></p>
                 </div>
               </div>
+                <% end %>
+
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
