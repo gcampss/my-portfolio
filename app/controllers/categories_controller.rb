@@ -6,6 +6,28 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    #sql
+    #select * from posts where post.category_id = @category.id
+    # posts = Post.where("post.category_id = ?", @category.id)
+    # active record
+    # todos os posts desta categoria
+    @posts = Post.where(category: @category)
+    @photos = []
+    @posts.each do |post|
+      post.photos.each do |photo|
+        photo_post = Post.find(photo.record_id)
+        @photos << {
+          photo: photo,
+          description: photo_post.description,
+          title: photo_post.title
+        }
+      end
+    end
+    # @photos.
+    #post 123
+    #foto 1
+    #foto 2
+    #foto 3
   end
 
   def new

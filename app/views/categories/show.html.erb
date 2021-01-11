@@ -1,75 +1,61 @@
  <div class="container">
   <div class="row"> 
-        <% if notice.present? %>
-          <%= notice.html_safe %>
-          <% end %>
     <div class="col-md-12">
       <ul class="list-group">
-        <% @category.posts.each do |post| %>
-          <% if post.photos.attached? %>
+        <%# @category.posts.each do |post| %>
+          <%# if post.photos.attached? %>
             <div class="test-center"> 
               <h1><%= @category.title  %></h1>
-              <%# <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %> 
-                  
-                
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#" data-slide-to="0" class="active"></li>
-                <li data-target="#" data-slide-to="1"></li>
-                <%# <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> %>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                 <%= cl_image_tag post.photos.first.key, height: 600, width: 1000, crop: :fill %>
-                   <div class="carousel-caption d-none d-md-block">
-                    <h5><%= post.title %></h5>
-                    <p><%= post.description %></p>
+              <%# <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>                 
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#" data-slide-to="0" class="active"></li>
+                  <li data-target="#" data-slide-to="1"></li>
+                  <%# <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> %>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                  <%= cl_image_tag @photos.first[:photo].key, height: 600, width: 1000, crop: :fill %>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5><%= @photos.first[:title] %></h5>
+                      <p><%= @photos.first[:description] %></p>
+                    </div>
                   </div>
-                </div>
-                 <% post.photos[1..-1].each do |photo| %>
-                <div class="carousel-item">
-                  <%= cl_image_tag photo.key, height: 600, width: 1000, crop: :fill %>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5><%= post.title %></h5>
-                    <p><%= post.description %></p>
-                </div>
+                  <% @photos[1..-1].each do |photo| %>
+                      <div class="carousel-item">
+                        <%= cl_image_tag photo[:photo].key, height: 600, width: 1000, crop: :fill %>
+                        <div class="carousel-caption d-none d-md-block">
+                      <h5><%= photo[:title] %></h5>
+                      <p><%= photo[:description] %></p>
+                        </div>
+                      </div>
+                  <% end %>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div> 
               </div>
-                <% end %>
+            </div>  
+          <%# end %>
+          <%#= link_to "Remove", category_post_path(@category, post), method: :delete, data: { confirm: "Are you sure?" } %>
+        <%# end %>
+      </ul>
+      <%= link_to 'Back', categories_path(@categories) %>
+        
 
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-                   
-                
-            </div> 
-              <% else %>
-              <% end %>
-                      <%= link_to "Remove",
-                                    category_post_path(@category, post),
-                                    method: :delete,
-                                    data: { confirm: "Are you sure?" } %>
-                    <% end %>
-                  </ul>
-
-                    
-                    <%= link_to 'Back', categories_path(@categories) %>
-                      
-
-                    <%= link_to "Delete category",
-                                category_path(@category.id),
-                                method: :delete,
-                                data: { confirm: "Are you sure?" } %>
+      <%= link_to "Delete category",
+                  category_path(@category.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
 
 
-                    <%= link_to 'Add new photo', new_category_post_path(@category) %>
-                    <%= link_to 'Edit category', edit_category_path(@category) %>
-
+      <%= link_to 'Add new photo', new_category_post_path(@category) %>
+      <%= link_to 'Edit category', edit_category_path(@category) %>
     </div>
   </div>
 </div>
