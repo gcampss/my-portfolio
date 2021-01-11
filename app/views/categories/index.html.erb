@@ -1,21 +1,21 @@
 <%= link_to '+ Add category', new_category_path %>
 <div class="container"> 
   <div class="row">
-      <% @categories.each do |category| %>
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category) do %> 
         <div class="col-md-6">
           <div class="exp-container"> 
             <div class="exp-card-head"> 
                 <%= category.title %>
                 <div class="card-style-category">
                 <% if category.photo.attached? %>
-                  <%= link_to category_path(category) do %> 
                     <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
-                  <% end %>
                 <% end %>
-             </div>
-           </div>
+              </div>
+            </div>
           </div>
         </div>
+      <% end %>
     <% end %>
   </div>
 </div>
