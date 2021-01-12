@@ -3,17 +3,23 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     flex-grow: 1;
-    padding: 15px;
+    padding: 10px;
     border-radius: 15px;
     height: 100%;
     filter: brightness(80%);
-    font-family:Ubuntu, sans-serif ;
+    font-family:Ubuntu, sans-serif;
     color:  #FFF4BD;
     font-size: 21px;
-    max-width: 215px;
+    max-width: 510px;
     max-height: 465px;
+   
 }
 
+
+.exp-card-head:hover {
+
+  filter: none;
+}
 .exp-container {
       // background-color: gray;
   margin: 10px 10px;
@@ -25,14 +31,19 @@
   height: 500px;
   border-radius: 10px;
   align-content: space-between;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+ 
   position: relative;
-  // text-decoration: none;
+ 
 }
 
 .card-style-category img {
     border-radius: 16px;
     box-shadow: 0 0 40px rgba(250,208,44, 0.1);
+}
+
+.card-style-category img:hover {
+  border-radius: 16px;
+  box-shadow: none;
 }
 
 .test-center {

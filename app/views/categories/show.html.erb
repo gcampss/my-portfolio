@@ -1,3 +1,6 @@
+  
+  <%= link_to '<- Back', categories_path(@categories) %>
+ 
  <div class="container">
   <div class="row"> 
     <div class="col-md-12">
@@ -6,12 +9,23 @@
           <%# if post.photos.attached? %>
             <div class="test-center"> 
               <h1><%= @category.title  %></h1>
-              <%# <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>                 
+              <%# <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>  
+                       
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#" data-slide-to="0" class="active"></li>
                   <li data-target="#" data-slide-to="1"></li>
+                  <li data-target="#" data-slide-to="2"></li>
+                  <li data-target="#" data-slide-to="3"></li>
+                  <li data-target="#" data-slide-to="4"></li>
+                  <li data-target="#" data-slide-to="5"></li>
+                  <li data-target="#" data-slide-to="6"></li>
+                  <li data-target="#" data-slide-to="7"></li>
+                  <li data-target="#" data-slide-to="8"></li>
+                  <li data-target="#" data-slide-to="9"></li>
+                  
                   <%# <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> %>
+                  <% if @photos.present? %>  
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -30,6 +44,7 @@
                         </div>
                       </div>
                   <% end %>
+                  <% end %>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -44,8 +59,9 @@
           <%# end %>
           <%#= link_to "Remove", category_post_path(@category, post), method: :delete, data: { confirm: "Are you sure?" } %>
         <%# end %>
+        <br>
       </ul>
-      <%= link_to 'Back', categories_path(@categories) %>
+      
         
 
       <%= link_to "Delete category",
@@ -59,3 +75,4 @@
     </div>
   </div>
 </div>
+<br>
