@@ -1,18 +1,17 @@
-<%= link_to '+ Add category', new_category_path %>
-<div class="container"> 
+<% if current_user && current_user.admin %>
+  <%= link_to '+ Add category', new_category_path %>
+<% end %>
+<div class="container">
   <div class="row">
-   
     <% @categories.each do |category| %>
-      <%= link_to category_path(category) do %> 
-          <div class="exp-container"> 
-          <div class="col-md-6">
-            <div class="exp-card-head"> 
-                <%= category.title %>
-                <div class="card-style-category">
-                <% if category.photo.attached? %>
-                    <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
-                <% end %>
-              </div>
+      <%= link_to category_path(category), class: "categories-card" do %>
+        <div class="col-md-6 mb-3">
+          <div class="exp-card-head">
+            <h4><%= category.title %></h4>
+            <div class="card-style-category">
+              <% if category.photo.attached? %>
+                  <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -20,4 +19,3 @@
     <% end %>
   </div>
 </div>
- 
