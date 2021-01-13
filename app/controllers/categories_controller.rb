@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :check_admin?, except: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @categories = Category.all
@@ -67,5 +69,12 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+  end
+
+  def check_admin?
+    # check if the logged user is an admin or not!
+    if current_user && current_user.admin != true
+      redirect_to root_path
+    end
   end
 end

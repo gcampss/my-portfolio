@@ -1,15 +1,16 @@
 <div class="banner">
-  <div class="container-landing" >
-      <div class="logo"> 
-        <h6>Gabriel Campista</h6>
+  <div class="banner-content" >
+    <div class="logos">
+        <div class="logo">
+          <h6>Gabriel Campista</h6>
+        </div>
+        <div class="logo">
+          <h5>Photography</h5>
+        </div>
       </div>
-      <div class="logo">
-        <h5>Photography</h5>
-      </div>
-      <div class="btn-in"> 
-        <%= button_to "come in", categories_path, :class => "button", :method => :get %>
-       <br>
-        <%= button_to 'about me', page_path('about'), :class => "button", :method => :get  %>
+      <div class="banner-buttons">
+        <%= link_to "come in", categories_path, class: "btn button-home" %>
+        <%= link_to "about me", about_path, class: "btn button-home" %>
     </div>
   </div>
 </div>
