@@ -4,13 +4,15 @@
 .logo {
     display: flexbox;
     font-family: Ubuntu;
-    color:  #FAD02C;
+    color:  #FFF4BD;
     font-weight: 400;
     h6 {
        font-size: 40px;
    }
     h5 {
        font-size: 30px;
+       color:#FAD02C;
+       margin-top: -15px;
    }
 }
 
