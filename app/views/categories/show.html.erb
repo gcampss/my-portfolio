@@ -4,12 +4,12 @@
  <div class="container">
   <div class="row">
     <div class="col-md-12">
+      
       <ul class="list-group">
         <%# @category.posts.each do |post| %>
           <%# if post.photos.attached? %>
             <div class="test-center">
               <h1><%= @category.title  %></h1>
-              <%# <%= cl_image_tag post.photos.first.key, height: 600, width: 800, crop: :fill %>
 
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -55,25 +55,13 @@
                   </a>
                 </div>
               </div>
-            </div>
+
           <%# end %>
           <%#= link_to "Remove", category_post_path(@category, post), method: :delete, data: { confirm: "Are you sure?" } %>
         <%# end %>
         <br>
       </ul>
 
-
-<% if current_user && current_user.admin %>
-  <%= link_to "Delete category",
-              category_path(@category.id),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
-
-
-  <%= link_to 'Add new photo', new_category_post_path(@category) %>
-  <%= link_to 'Edit category', edit_category_path(@category) %>
-<% end %>
-</div>
   </div>
 </div>
 <br>
