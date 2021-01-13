@@ -2,17 +2,17 @@
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) );
     background-repeat: no-repeat;
     background-size: 100% auto;
-    flex-grow: 1;
     padding: 10px;
     border-radius: 15px;
-    height: 100%;
     filter: brightness(80%);
-    font-family:Ubuntu, sans-serif;
+    font-family: Ubuntu, sans-serif;
     color:  #FFF4BD;
     font-size: 21px;
-    max-width: 510px;
-    max-height: 465px;
-   
+
+}
+
+.categories-card:hover{
+  text-decoration: none;
 }
 
 
@@ -31,9 +31,9 @@
   height: 500px;
   border-radius: 10px;
   align-content: space-between;
- 
+
   position: relative;
- 
+
 }
 
 .card-style-category img {
