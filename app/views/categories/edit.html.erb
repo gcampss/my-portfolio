@@ -1,12 +1,11 @@
 <!-- app/views/reviews/new.html.erb -->
 <div class="container">
-<%= simple_form_for @category do |f| %>
-  <%= f.input :title, input_html: { autocomplete: 'off' } %>
-  <%= f.input :photo, as: :file %>
-
-  <%= f.submit "NEXT", class: "btn btn-primary" %>
-
-<% end %>
-
-  <%= link_to 'Back to categories', categories_path(@category) %>
+  <div class="add-post"> 
+    <%= simple_form_for @category do |f| %>
+      <%= f.input :title, input_html: { autocomplete: 'off' } %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "NEXT", class: "btn btn-primary" %>
+    <% end %>
+      <%= link_to 'Back to categories', categories_path(@category) %>
+    </div>
   </div>

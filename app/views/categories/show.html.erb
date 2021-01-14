@@ -55,16 +55,14 @@
                   </a>
                 </div>
               </div>
-                              <%# <% if current_user && current_user.admin %> 
-  <%= link_to "Delete category",
-              category_path(@category.id),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+                <% if current_user && current_user.admin %> 
+                  <%= link_to "Delete category",
+                  category_path(@category.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
 
-
-  <%= link_to 'Add new photo', new_category_post_path(@category) %>
-  <%= link_to 'Edit category', edit_category_path(@category) %>
-<%# <% end %>
+                  <%= link_to 'Edit category', edit_category_path(@category) %>
+               <% end %>
 
           <%# end %>
           <%#= link_to "Remove", category_post_path(@category, post), method: :delete, data: { confirm: "Are you sure?" } %>
