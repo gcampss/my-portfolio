@@ -14,6 +14,7 @@ User.destroy_all
 puts "Creating Users"
 User.create!(email: "gcampss@gmail.com", password: "123456")
 
+
 puts "Creating Categories"
 c_1 = Category.create!(title: "Nature")
 c_1 = Category.create!(title: "Concerts")

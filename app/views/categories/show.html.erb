@@ -6,7 +6,11 @@
     <div class="col-md-12 text-center">
         <div class="category-header">
           <h1><%= @category.title  %></h1>
+          <div class="crud-links-add"> 
+          <% if current_user && current_user.admin %>
           <%= link_to '+ Add new photo', new_category_post_path(@category) %>
+          </div>
+          <% end %>
         </div>
       <div class="test-center">
         <% if @photos.present? %>
@@ -54,11 +58,12 @@
           </div>
         <% end %>
       </div>
-        <div class="crud-links">
+        <div class="crud-links-general d-flex justify-content-around mt-4 mb-4">
           <% if current_user && current_user.admin %>
-            <%= link_to "Delete category", category_path(@category.id), method: :delete, data: { confirm: "Are you sure?" } %>
-            <%= link_to 'Add new photo', new_category_post_path(@category) %>
-            <%= link_to 'Edit category', edit_category_path(@category) %>
+          
+            <%= link_to "Delete Category", category_path(@category.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
+              <%= link_to 'Edit Category', edit_category_path(@category), class: "btn btn-outline-secondary" %>
+           
           <%end %>
         </div>
     </div>
