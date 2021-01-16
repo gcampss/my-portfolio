@@ -61,6 +61,13 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
     height: 100vh;
 }
 
+// @media only screen and (max-width: 768px) {
+//     /* For mobile phones: */
+//     [class*="col-"] {
+//       width: 100%;
+//     }
+//   }
+
 .container-landing {
 
     height: 360px;
@@ -89,4 +96,31 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
      display: grid;
      min-height: 100vh;
      grid-template-rows: auto 1fr auto;
+}
+
+@media only screen and (max-width: 768px) {
+     /* For mobile phones: */ 
+    .banner {
+        width: 100%;
+        
+  }
+}
+
+@media only screen and (orientation: portrait) {
+    .banner {
+       background-size: cover;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg');
+       
+      
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .button {
+        color: red;
+    }
+    .btn {
+        display: inline;
+        padding: 10px 15px;
+    }
 }
