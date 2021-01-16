@@ -102,25 +102,22 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
      /* For mobile phones: */ 
     .banner {
         width: 100%;
-        
   }
 }
 
 @media only screen and (orientation: portrait) {
     .banner {
        background-size: cover;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg');
-       
-      
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg'); 
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .button {
-        color: red;
+    .button-home {
+        float: left;
+        margin-top: 1vh;
     }
     .btn {
         display: inline;
-        padding: 10px 15px;
     }
 }
