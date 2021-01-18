@@ -5,7 +5,7 @@
   <div class="row">
     <% @categories.each do |category| %>
       <%= link_to category_path(category), class: "categories-card" do %>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-6">
           <div class="exp-card-head mt-4">
             <h4><%= category.title %></h4>
             <div class="card-style-category">

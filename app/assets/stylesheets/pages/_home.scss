@@ -61,6 +61,13 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
     height: 100vh;
 }
 
+// @media only screen and (max-width: 768px) {
+//     /* For mobile phones: */
+//     [class*="col-"] {
+//       width: 100%;
+//     }
+//   }
+
 .container-landing {
 
     height: 360px;
@@ -89,4 +96,81 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
      display: grid;
      min-height: 100vh;
      grid-template-rows: auto 1fr auto;
+}
+
+@media only screen and (max-width: 768px) {
+     /* For mobile phones: */ 
+    .banner {
+        width: 100%;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+    .banner {
+       background-size: cover;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg'); 
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .button-home {
+        float: left;
+        margin-top: 1vh;
+    }
+    .btn {
+        display: inline;
+    }
+}
+
+// iphone 6/7/8 plus - 414 width 716 height 
+
+@media only screen and (max-width: 415px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_385/v1610829571/out_mo1_copy_tdosmu.png'); 
+    }
+}
+
+
+// iphone 6/7/8 - 375 width 667 height / 345 820
+
+@media only screen and (max-width: 380px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_345/v1610829571/out_mo1_copy_tdosmu.png'); 
+    }
+}
+
+
+// iphone 5 se - 375 width 667 height / 295 820
+
+// @media only screen and (min-width: 310px) {
+//     .about-content {
+//         background-repeat: no-repeat;
+//         background-size: auto;
+//        background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_285/v1610829571/out_mo1_copy_tdosmu.png'); 
+//     }
+// }
+
+
+// Sansung Galaxy s5 e Moto G4 se - 375 width 667 height / 330 820
+
+@media only screen and (max-width: 370px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_330/v1610829571/out_mo1_copy_tdosmu.png'); 
+    }
+}
+
+// iphone 5 se 320 width / 290  820
+
+@media only screen and (max-width: 340px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_290/v1610829571/out_mo1_copy_tdosmu.png'); 
+    }
 }
