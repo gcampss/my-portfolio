@@ -174,3 +174,33 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
        background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610999652/out_290_vnuy4j.png'); 
     }
 }
+
+// // ipad 768 - 700 / 820
+
+ @media only screen and (min-width: 768px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_s_fit_hsfuzo.png'); 
+ }
+}
+
+// ipad 1024 - 930 / 820
+
+@media only screen and (min-width: 1024px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_g_fit_g9sqji.png'); 
+    }
+}
+
+// ajustar about para desktop // nok
+
+@media only screen and (min-width: 1026px) {
+    .about-content {
+        background-repeat: no-repeat;
+        background-size: auto;
+       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608406208/boutnewnew_uevjye.png'); 
+    }
+}
