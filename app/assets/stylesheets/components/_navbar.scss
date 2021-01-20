@@ -30,7 +30,7 @@
 }
 
 .about-content {
-  
+
 text-align: center;
 background-size: cover;
 
@@ -47,7 +47,7 @@ box-shadow: 1px 1px 3px gray;
 
 @media screen and (max-width: 768px) {
   .about-content {
-      background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610831061/out_mo_s_copy_aupws1.png'); 
+      background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610831061/out_mo_s_copy_aupws1.png');
       background-size: contain;
       width: 100%;
       background-repeat: no-repeat;
@@ -62,7 +62,7 @@ box-shadow: 1px 1px 3px gray;
   font-size: 28px;
   transition: 0.2s ease-out;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
- 
+
 }
 
 .dropdown-burger:hover {
@@ -90,7 +90,7 @@ box-shadow: 1px 1px 3px gray;
 }
 
 .dropdown-menu {
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color: rgb(50, 50, 50);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
   border-radius: 4px;
 }
