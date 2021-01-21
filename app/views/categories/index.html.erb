@@ -7,8 +7,11 @@
       <%= link_to category_path(category), class: "categories-card" do %>
         <div class="col-md-6 mb-3">
           <div class="exp-card-head mt-4">
-            <h4><%= category.title %></h4>
+          <div class="item-item">
+            
+          </div> 
             <div class="card-style-category">
+            <h4><%= category.title %></h4>
               <% if category.photo.attached? %>
                   <%= cl_image_tag category.photo.key, height: 400, width: 500, crop: :fill %>
               <% end %>

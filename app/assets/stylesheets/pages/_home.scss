@@ -16,6 +16,10 @@
    }
 }
 
+.logo-font-banner2 {
+    color: #FAD02C;
+}
+
 .button {
 width: 20%;
 color: #d3d3d3;
@@ -93,7 +97,7 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 .page-container-global {
     //  background-image: url('https://res.cloudinary.com/chocalho/image/upload/e_art:incognito/v1608401990/photo-1527606078995-42486f991014_hwmnhn.jpg');
      background-color: #1B1817;
-     display: grid;
+      display: grid;
      min-height: 100vh;
      grid-template-rows: auto 1fr auto;
 }
