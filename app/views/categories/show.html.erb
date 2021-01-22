@@ -1,5 +1,5 @@
 
-<%= link_to '⬅ Back', categories_path(@categories), class: "btn btn-outline-dark ml-3" %>
+<%= link_to '⬅ Back', categories_path(@categories), class: "btn btn-outline-dark ml-3 mt-2" %>
 <br>
 <% if current_user && current_user.admin %>
 <%= link_to 'Add 📷', new_category_post_path(@category), class: "btn btn-outline-dark mt-2 ml-3" %>
