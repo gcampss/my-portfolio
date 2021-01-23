@@ -8,8 +8,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    #sql
-    #select * from posts where post.category_id = @category.id
+    # sql
+    # select * from posts where post.category_id = @category.id
     # posts = Post.where("post.category_id = ?", @category.id)
     # active record
     # todos os posts desta categoria
@@ -25,11 +25,6 @@ class CategoriesController < ApplicationController
         }
       end
     end
-    # @photos.
-    #post 123
-    #foto 1
-    #foto 2
-    #foto 3
   end
 
   def new
