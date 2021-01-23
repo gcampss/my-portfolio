@@ -7,17 +7,17 @@
     color:  #FFF4BD;
     font-weight: 400;
     h6 {
-       font-size: 40px;
+    font-size: 40px;
    }
     h5 {
-       font-size: 30px;
-       color:#FAD02C;
-       margin-top: -15px;
+    font-size: 30px;
+    color:#FAD02C;
+    margin-top: -15px;
    }
 }
 
 .logo-font-banner2 {
-    color: #FAD02C;
+color: #FAD02C;
 }
 
 .button {
@@ -44,85 +44,71 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 }
 
 .btn-in {
-
-
-    position: relative;
-    bottom: -350px;
-    left: 110px;
-
-
-
+position: relative;
+bottom: -350px;
+left: 110px;
 }
 
 .banner {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610627666/DSC_9573p_s1qpku.jpg');
-    height: 100vh;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-position: center;
+padding: 100px 20px;
+background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610627666/DSC_9573p_s1qpku.jpg');
+height: 100vh;
 }
 
-// @media only screen and (max-width: 768px) {
-//     /* For mobile phones: */
-//     [class*="col-"] {
-//       width: 100%;
-//     }
-//   }
-
 .container-landing {
-
-    height: 360px;
-
-
+height: 360px;
 }
 
 .banner-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: space-between;
 }
 
 // .page-container{
-//     background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608326690/DSC_2301_ryxs8i.jpg');
-//     background-size: cover;
-//     max-width:100% !important;
-//     box-shadow: 1px 1px 1px #000055;
+//  background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1608326690/DSC_2301_ryxs8i.jpg');
+//  background-size: cover;
+//  max-width:100% !important;
+//  box-shadow: 1px 1px 1px #000055;
 // }
 
 
 .page-container-global {
-    //  background-image: url('https://res.cloudinary.com/chocalho/image/upload/e_art:incognito/v1608401990/photo-1527606078995-42486f991014_hwmnhn.jpg');
-     background-color: #1B1817;
-     display: grid;
-     min-height: 100vh;
-     grid-template-rows: auto 1fr auto;
+background-color: #1B1817;
+display: grid;
+min-height: 100vh;
+grid-template-rows: auto 1fr auto;
 }
 
+// media query responsible 
+
 @media only screen and (max-width: 768px) {
-     /* For mobile phones: */ 
+    // For mobile phones:
     .banner {
-        width: 100%;
+    width: 100%;
   }
 }
 
 @media only screen and (orientation: portrait) {
     .banner {
-       background-size: cover;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg'); 
+    background-size: cover;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610812146/DSC_9573ppp_fmxbmh.jpg'); 
     }
 }
 
 @media only screen and (max-width: 500px) {
     .button-home {
-        float: left;
-        margin-top: 1vh;
+    float: left;
+    margin-top: 1vh;
     }
     .btn {
-        display: inline;
+    display: inline;
     }
 }
 
@@ -130,9 +116,9 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
 @media only screen and (max-width: 415px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_385_xvgumj.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_385_xvgumj.png'); 
     }
 }
 
@@ -141,31 +127,20 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
 @media only screen and (max-width: 380px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_345_xi0d1g.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_345_xi0d1g.png'); 
     }
 }
-
-
-// iphone 5 se - 375 width 667 height / 295 820
-
-// @media only screen and (min-width: 310px) {
-//     .about-content {
-//         background-repeat: no-repeat;
-//         background-size: auto;
-//        background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_285/v1610829571/out_mo1_copy_tdosmu.png'); 
-//     }
-// }
 
 
 // Sansung Galaxy s5 e Moto G4 se - 375 width 667 height / 330 820
 
 @media only screen and (max-width: 370px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_330_blc3v9.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611001980/out_330_blc3v9.png'); 
     }
 }
 
@@ -173,9 +148,9 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
 @media only screen and (max-width: 340px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610999652/out_290_vnuy4j.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1610999652/out_290_vnuy4j.png'); 
     }
 }
 
@@ -183,9 +158,9 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
  @media only screen and (min-width: 768px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_s_fit_hsfuzo.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_s_fit_hsfuzo.png'); 
  }
 }
 
@@ -193,18 +168,18 @@ text-shadow: 1px 1px 0.5px  #FAD02C;
 
 @media only screen and (min-width: 1024px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: auto;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_g_fit_g9sqji.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/v1611074418/pad_g_fit_g9sqji.png'); 
     }
 }
 
-// ajustar about para desktop // nok
+// ajustar about para desktop // ok
 
 @media only screen and (min-width: 1026px) {
     .about-content {
-        background-repeat: no-repeat;
-        background-size: cover;
-       background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_1100/v1608406208/boutnewnew_uevjye.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://res.cloudinary.com/chocalho/image/upload/c_scale,h_820,w_1100/v1608406208/boutnewnew_uevjye.png'); 
     }
 }
