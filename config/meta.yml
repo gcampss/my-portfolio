@@ -1,5 +1,5 @@
 meta_product_name: "Gabriel Campista Photography"
-meta_title: "Gabriel Campista Photography - Hope you like my pictures"
-meta_description: "Gabriel Campista amazing photos: I'd like to invite you to my photography collection. Hope my work capt your attention."
-meta_image: "surfer.jpg" # should exist in `app/assets/images/`
+meta_title: "Gabriel Campista Photography"
+meta_description: "Gabriel Campista amazing photos: I'd like to invite you to my photography portfolio."
+meta_image: "foto5.jpg" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
