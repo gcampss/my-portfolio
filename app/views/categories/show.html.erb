@@ -31,16 +31,16 @@
               <div class="carousel-item active">
                 <%= cl_image_tag @photos.first[:photo].key, class:"image-slider", crop: :fill %>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5><%= @photos.first[:title] %></h5>
-                  <p><%= @photos.first[:description] %></p>
+                  <!--<h5><%= @photos.first[:title] %></h5>
+                  <p><%= @photos.first[:description] %></p> -->
                 </div>
               </div>
               <% @photos[1..-1].each do |photo| %>
                   <div class="carousel-item">
                     <%= cl_image_tag photo[:photo].key, class:"image-slider", crop: :fill %>
                     <div class="carousel-caption d-none d-md-block">
-                      <h5><%= photo[:title] %></h5>
-                      <p><%= photo[:description] %></p>
+                      <!--<h5><%= photo[:title] %></h5>
+                      <p><%= photo[:description] %></p> -->
                     </div>
                   </div>
               <% end %>
@@ -58,10 +58,8 @@
       </div>
         <div class="crud-links-general d-flex justify-content-around mt-4 mb-4">
           <% if current_user && current_user.admin %>
-          
             <%= link_to "Delete Category", category_path(@category.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
               <%= link_to 'Edit Category', edit_category_path(@category), class: "btn btn-outline-secondary" %>
-           
           <%end %>
         </div>
     </div>
