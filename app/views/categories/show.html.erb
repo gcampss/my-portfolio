@@ -30,7 +30,7 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <%= cl_image_tag @photos.first[:photo].key, class:"image-slider", crop: :fill %>
-                  <div class="carousel-caption d-none d-md-block"> %>
+                  <div class="carousel-caption d-none d-md-block">
                     <h5><%= @photos.first[:title] %></h5>
                     <p><%= @photos.first[:description] %></p>
                   </div>
