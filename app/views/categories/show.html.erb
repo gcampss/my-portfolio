@@ -30,18 +30,18 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <%= cl_image_tag @photos.first[:photo].key, class:"image-slider", crop: :fill %>
-                  <div class="carousel-caption d-none d-md-block">
+                 <!-- <div class="carousel-caption d-none d-md-block">
                     <h5><%= @photos.first[:title] %></h5>
                     <p><%= @photos.first[:description] %></p>
-                  </div>
+                  </div>-->
                 </div>
                 <% @photos[1..-1].each do |photo| %>
                     <div class="carousel-item">
                       <%= cl_image_tag photo[:photo].key, class:"image-slider", crop: :fill %>
-                      <div class="carousel-caption d-none d-md-block">
+                      <!--<div class="carousel-caption d-none d-md-block">
                         <h5><%= photo[:title] %></h5>
                         <p><%= photo[:description] %></p>
-                      </div>
+                      </div>-->
                     </div>
                 <% end %>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
